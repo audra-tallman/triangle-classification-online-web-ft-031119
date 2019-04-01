@@ -9,7 +9,7 @@ class Triangle
   
  
   def actual_triangle
-    triangle ? [(a + b > c), (b + c > a), (a + c > b)] &&
+    real_triangle = [(a + b > c), (b + c > a), (a + c > b)]
       [a, b, c].each {|side| side >= 0} : puts TriangleError
   end 
  
