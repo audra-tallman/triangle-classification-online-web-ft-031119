@@ -9,9 +9,9 @@ class Triangle
   
  
   def actual_triangle
-    real_triangle = [(a + b > c), (b + c > a), (a + c > b)]
-      [a, b, c].each {|side| real_triangle << false if s<= 0} 
-      raise TriangleError if real_triangle.include? (false)
+    legit_triangle = [(a + b > c), (b + c > a), (a + c > b)]
+      [a, b, c].each {|side| legit_triangle << false if side <= 0} 
+      raise TriangleError if legit_triangle.include? (false)
   end 
  
   def kind 
